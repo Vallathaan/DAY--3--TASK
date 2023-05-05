@@ -19,3 +19,45 @@ if(Object.keys(obj1).length==Object.keys(obj2).length){
 else {
     flag=false;
 }
+
+
+//2) displayin the countriesflag in console
+
+var request=new XMLHttpRequest();
+request.open("https://restcountries.eu/rest/v2/countries flag");
+request.send();
+request.onload=function (){
+    var countryData=JSON.parse(this.response);
+    const countriesflag=countryData.filter((a)=>{
+                
+    })
+    console.log(countries flag)
+
+
+//3)printing all countriesname,region,population
+
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.eu/rest/v2/all");
+request.send();
+request.onload=function (){
+    var countryname=JSON.parse(this.response);
+    const all=countryname.filter((a)=>{
+    
+    })
+    console.log(all countries)
+
+    // population
+
+   var request=new XMLHttpRequest();
+   request.open("https://restcountries.eu/rest/v2/all");
+   request.send();
+   request.onload=function ()
+   var countryData=JSON.parse(this.response);
+   const populate=countryData.population((element)=>{
+        return element.population;
+   })
+   console.log(populate)
+
+   //region
+
+   
